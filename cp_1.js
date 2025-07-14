@@ -23,3 +23,6 @@ form.addEventListener('mouseover', (e) => {
     }
 });
 
+form.addEventListener('mouseout', () => {
+    tooltip.style.display = 'none';
+}
