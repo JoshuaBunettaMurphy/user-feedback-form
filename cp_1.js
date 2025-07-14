@@ -26,3 +26,20 @@ form.addEventListener('mouseover', (e) => {
 form.addEventListener('mouseout', () => {
     tooltip.style.display = 'none';
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let valid = true;
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.style.border = '2px solid red';
+            valid = false;
+        } else {
+            input.style.border = '';
+        }
+    });
+
+    if (!valid) return;
+
+    
