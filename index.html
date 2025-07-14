@@ -18,14 +18,17 @@
                 <input type="email" id="Email" name="Email" required>
 
                 <label for="Thoughts/Opinions">Feedback:</label>
-                <textarea id="Thoughts/Opinions" name="Thoughts/Opinions" rows="4" required></textarea>
-
+                <textarea id="Thoughts/Opinions" name="Thoughts/Opinions" rows="4" data-tooltip="Feedback goes here"></textarea>
+                <div id="charCount">Character count: 0</div>
                 <button type="submit">Submit</button>
             </form>
         </div>
 
-        <div id="feedback-display"></div>
+        <div id="feedbackDisplay">
+            <h2>Thank you for your feedback!</h2>
+        </div>
 
         <script src="cp=1.js"></script>
+    </body>
 </html>
 
