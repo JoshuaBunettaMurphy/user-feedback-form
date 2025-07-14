@@ -40,6 +40,28 @@ form.addEventListener('submit', (e) => {
         }
     });
 
-    if (!valid) return;
+if (!valid) return;
 
-    
+ let name = document.getElementById('Username').value;
+ let email = document.getElementById('Email').value;
+ let comment = comments.value;
+
+let feedbackItem = document.createElement('div');
+feedbackItem.innerHTML = `<p><strong>${name}</strong> (${email}): ${comment}</p>`;
+feedbackDisplay.appendChild(feedbackItem);
+form.reset();
+
+charcount.textContent = 'Character count: 0';
+});
+
+form.addEventListener('focus', (e) => {
+    console.log(`Focus is on: ${e.target.name}`);
+});
+
+document.body.addEventListener('click', () => {
+    console.log('Body clicked');
+});
+
+form.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
